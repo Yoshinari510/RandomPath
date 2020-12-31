@@ -197,7 +197,7 @@ let canvasToImg = () => {
 	let jpg = canvas.toDataURL('image/jpeg', 1.0);
   document.querySelector('body').insertAdjacentHTML('afterbegin',`<img src='${jpg}' id="mainImg"/>`);
   let mainImg = document.querySelector('#mainImg');
-  mainImg.height = window.screen.height*window.devicePixelRatio*0.75;
+  mainImg.width = window.innerWidth*0.75;
   // mainImg.style.marginTop = window.innerHeight*0.05 + 'px';
 }
 
