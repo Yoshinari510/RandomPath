@@ -273,7 +273,10 @@ while ((l <= ll && (ll+5)/(l+5) < 4) || (l >= ll && (l+5)/(ll+5) < 4)) {
 	ctx.fillRect(0, 0, rangex, rangey);
 	drawPolygon(points, `hsl(${hue}, ${s}%, ${l}%)`);
 	
-	document.querySelector('body').style.backgroundColor = `hsl(${hue},${s}%,${ll}%)`;
+// 	document.querySelector('body').style.backgroundColor = `hsl(${hue},${s}%,${ll}%)`;
+  let bgcolor = null;
+  bgGradient = `hsl(${hue},${s/5}%,${(l+ll)/2}%)`;
+	document.querySelector('body').style.background = bgGradient;
 }
 
 
@@ -290,7 +293,7 @@ function drawPolygon(points, color){
 		ctx.strokeStyle = color;
 		ctx.fillStyle = color;
 	}
-	ctx.lineWidth = 0.5;
+	ctx.lineWidth = 0.25;
 	ctx.beginPath();
 	ctx.moveTo(points[0], points[1]);
 	for(let i = 2; i < points.length; i += 2){
