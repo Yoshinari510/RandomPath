@@ -12,6 +12,8 @@ body {
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: center;
+  background-color: #000;
+	transition: background 500ms ease-out;
 }
 
 #mainImg {
@@ -186,11 +188,10 @@ input , select {
 	position: relative;
 	top: 0;
 	transition:
-	  top 300ms ease-in-out,
-	  border-bottom 300ms ease-in-out,
-	  background-color 300ms ease-in-out,
-	  box-shadow 300ms ease-in-out;
-  /*box-shadow: 0 3px 5px #555;*/
+	  top 50ms ease-in-out,
+	  opacity 50ms ease-in-out,
+	  box-shadow 50ms ease-in-out;
+  box-shadow: 0 5px 10px #222;
   -webkit-tap-highlight-color:rgba(0,0,0,0);
 }
 
@@ -205,4 +206,6 @@ input , select {
 
 .btn:active {
   opacity: 0.5;
+  top: 3px;
+  box-shadow: 0 2px 4px #666;
 }
